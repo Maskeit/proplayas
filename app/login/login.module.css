@@ -1,0 +1,90 @@
+
+.imagen{
+    height: 100vh;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+    filter: drop-shadow(10px 10px 4px #ccc);
+    object-fit: cover;
+}
+.loginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+  }
+  
+  .loginBox {
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .loginTitle {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #3F8897;
+    font-size: larger;
+  }
+  
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputGroup {
+    margin-bottom: 1rem;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background: #F2F2F2;
+  }
+  
+  .checkboxGroup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .checkbox {
+    margin-right: 0.5rem;
+  }
+  
+  .checkboxLabel {
+    font-size: 0.875rem;
+    color: #333;
+  }
+  
+  .loginButton {
+    padding: 0.75rem;
+    background-color: #17a2b8;
+    border: none;
+    border-radius: 35px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .loginButton:hover {
+    background-color: #138496;
+  }
+  
+  .forgotPassword {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .forgotPassword:hover {
+    text-decoration: underline;
+  }
+  
