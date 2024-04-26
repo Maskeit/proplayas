@@ -1,24 +1,18 @@
 
-.imagen{
-    height: 100vh;
-    border-top-right-radius: 200px;
-    border-bottom-right-radius: 200px;
-    filter: drop-shadow(10px 10px 4px #ccc);
-    object-fit: cover;
-}
-.loginContainer {
+ .loginContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     background-color: #fff;
+    /* border: 1px solid red; */
+    /* position: relative; */
   }
-  
+
   .loginBox {
     padding: 2rem;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
   }
@@ -26,8 +20,8 @@
   .loginTitle {
     margin-bottom: 2rem;
     text-align: center;
-    color: #3F8897;
-    font-size: larger;
+    color: #09434c;
+    font-size: 2rem;
   }
   
   .loginForm {
@@ -36,16 +30,33 @@
   }
   
   .inputGroup {
+    position: relative;
     margin-bottom: 1rem;
+  }
+  
+  .icon {
+    position: absolute;
+    left: 10px;
+    top: 54%;
+    opacity: .6;
+  }
+  
+  .label {
+    color: #09434c;
+    display: block; /* Asegúrate de que la etiqueta sea un bloque para que el input aparezca debajo */
+    margin-bottom: 5px; /* Ajustado para el espaciado correcto */
   }
   
   .inputField {
     width: 100%;
     padding: 0.75rem;
-    border: none;
+    padding-left: 2.5rem; /* Agregado espacio para el icono */
+    border: 1px solid #ccc; /* Añadido para visualizar el borde */
     border-radius: 8px;
     background: #F2F2F2;
   }
+  
+  /* Selecciona el icono inmediatamente después del input enfocado*/
   
   .checkboxGroup {
     display: flex;
@@ -63,13 +74,18 @@
   }
   
   .loginButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.75rem;
-    background-color: #17a2b8;
+    background-color: #188fa2;
     border: none;
     border-radius: 35px;
     color: white;
+    font-weight: 600;
     cursor: pointer;
     transition: 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
   
   .loginButton:hover {
