@@ -3,8 +3,6 @@ import '@/app/components/buttons.component.css'
 import {Bars3Icon, QuestionMarkCircleIcon, ArrowLeftCircleIcon } from '@heroicons/react/24/outline';
 
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { link } from 'fs';
 
 export type Buttons = {
     text: string;

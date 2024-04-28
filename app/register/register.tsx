@@ -25,7 +25,7 @@ export const RegisterForm = ()=>{
                 </div>
             </div>
             <div className={styles.inputGroup}>
-                <label className={styles.label} htmlFor="password">Repite tu contraseña</label>
+                <label className={styles.label} htmlFor="password2">Repite tu contraseña</label>
                 <input  type="password" name='password2' id='password2'  className={styles.inputField} required/>
                 <div className={styles.icon}>
                     <LockClosedIcon width='24px'/>

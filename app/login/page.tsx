@@ -8,10 +8,9 @@ export default function Page() {
     <div className={`flex flex-col md:grid md:grid-cols-2 ${styles.page}`}>
         <div className={`${styles.backbtn}`}>
             <BackButton color='#fff' href='/'/>
-            {/* <p>Regresar</p> */}
         </div>
         <div className="hidden md:block">
-            <Banner bannerName="tortuga"/>
+            <Banner/>
         </div>
             <LoginForm/>
 
