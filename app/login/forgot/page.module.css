@@ -1,0 +1,71 @@
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* border: 1px solid #09f; */
+}
+
+.item h1{
+    color: #3F8897;
+    font-size: 2rem;
+}
+
+.item p{
+    color: #555;
+    font-size: 1rem;
+}
+.forgotForm{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #09f; */
+    gap: 1rem;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+.forgotButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #188fa2;
+    border: none;
+    border-radius: 35px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .forgotButton:hover {
+    background-color: #138496;
+  }
+
+  .inputField {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc; /* Añadido para visualizar el borde */
+    border-radius: 8px;
+    background: #F2F2F2;
+  }
+
+.backbtn{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.backbtn:hover{
+    cursor: pointer;
+}

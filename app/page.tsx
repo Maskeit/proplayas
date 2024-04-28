@@ -5,9 +5,14 @@ import styles from '@/app/ui/home.module.css';
 import { Small_Button } from './components/buttons';
 import Image from 'next/image';
 import { lusitana, opens, quicksand, montserrat } from './ui/fonts';
+
+import { Menu } from './components/buttons';
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col p-0">
+    <main className={`flex min-h-screen flex-col p-0 ${styles.mainPage}`}>
+      <div className={styles.menu}>
+        <Menu/>
+      </div>
       <div className={styles.banner}>
         <Image
           src="/proplayas_logo.svg"

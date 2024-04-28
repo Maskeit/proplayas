@@ -1,0 +1,26 @@
+.page{
+    position: relative;
+}
+
+.backbtn{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+  }
+  /* color: #0c616e; */
+  .backbtn:hover{
+    cursor: pointer;
+    filter: drop-shadow(3px 3px 3px #107c8c);
+  }
+
+  .questions{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    transition: 0.3s ease;
+  }
+  .questions:hover{
+    cursor: pointer;
+    filter: drop-shadow(1px 1px 2px #ccc);
+  }
