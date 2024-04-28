@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './banner.module.css';
 import Image from 'next/image';
-import tortuga from '@/public/tortuga-marina.jpeg';
+import playa from '@/public/playa1.jpeg'
 import logoPropPlayas from '@/public/proplayas_logo.svg';
 
 export const Banner = () => {
@@ -19,8 +19,8 @@ export const Banner = () => {
 
         <Image
             className={`${styles.imagen} md:w-1/2 hidden md:block`}
-            alt='tortuga'
-            src={tortuga}
+            alt='playas_iberoamerica'
+            src={playa}
         />
     </div>
   )

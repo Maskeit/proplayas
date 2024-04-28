@@ -1,19 +1,19 @@
 import { LoginForm } from '@/app/login/login';
-import { Banner } from '@/app/login/banner';
+import { RegisterForm } from '@/app/register/register';
+import { Banner } from '@/app/register/banner';
 import { BackButton, Help } from '../components/buttons';
-import styles from '@/app/login/page.module.css';
+import styles from '@/app/register/page.module.css';
 import React from 'react';
 export default function Page() {
     return (
     <div className={`flex flex-col md:grid md:grid-cols-2 ${styles.page}`}>
         <div className={`${styles.backbtn}`}>
             <BackButton color='#fff' href='/'/>
-            {/* <p>Regresar</p> */}
         </div>
         <div className="hidden md:block">
-            <Banner bannerName="tortuga"/>
+            <Banner/>
         </div>
-            <LoginForm/>
+            <RegisterForm/>
 
         <div className={`${styles.questions}`}>
             <Help/>
