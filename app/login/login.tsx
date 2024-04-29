@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './login.module.css';
-import { BackButton } from '@/app/components/buttons';
-import {UserCircleIcon , LockClosedIcon } from '@heroicons/react/24/outline';
+import { LockClosedIcon, AtSymbolIcon } from '@heroicons/react/24/outline';
 import {ArrowRightOnRectangleIcon} from '@heroicons/react/24/outline';
 import Link from 'next/link';
 export const LoginForm = ()=>{
@@ -15,7 +14,7 @@ export const LoginForm = ()=>{
                 <label className={styles.label} htmlFor="email">Correo electrónico</label>
                 <input type="email" id='email' name='email' placeholder="" className={styles.inputField} required />
                 <div className={styles.icon}>
-                    <UserCircleIcon width='24px'/>
+                    <AtSymbolIcon width='24px'/>
                 </div>
             </div>
             <div className={styles.inputGroup}>
