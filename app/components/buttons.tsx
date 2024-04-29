@@ -19,14 +19,14 @@ export const Small_Button = ({text} :Buttons ) => {
   )
 }
 
-export const BackButton = ({color, href} : Props) =>{
+export const BackButton = ({ className, href } : { className: string, href: string }) => {
   return (
     <Link href={href}>
-      <ArrowLeftCircleIcon color={color} width='45px' />
+      <ArrowLeftCircleIcon className={className} width='45px' />
     </Link>
   );
+};
 
-}
 
 export const Help = () =>{
   return (
