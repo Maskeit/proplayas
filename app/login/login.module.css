@@ -53,6 +53,7 @@
     border: 1px solid #ccc; /* Añadido para visualizar el borde */
     border-radius: 8px;
     background: #F2F2F2;
+    padding-left: 2.3rem;
   }
   
   /* Selecciona el icono inmediatamente después del input enfocado*/

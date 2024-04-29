@@ -8,7 +8,7 @@ export const Banner = () => {
   return (
     <div className={`${styles.bannerContainer}`}>
 
-        <div className={`${styles.logoOver}`}>
+        <div className={`${styles.logoOver} md:flex-col lg:flex-row`}>
             <Image
                 className={`${styles.logoImg}`}
                 src={logoPropPlayas}
