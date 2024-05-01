@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from '@/app/ui/home.module.css';
 import { Small_Button } from './components/buttons';
 import Image from 'next/image';
+import { HomeContent } from './ui/homec/home-content';
 import { lusitana, opens, quicksand, montserrat } from './ui/fonts';
 
 import { Menu } from './components/buttons';
@@ -13,7 +14,7 @@ export default function Page() {
       <div className={styles.menu}>
         <Menu/>
       </div>
-      <div className={styles.banner}>
+      <section className={styles.banner}>
         <Image
           src="/proplayas_logo.svg"
           width={360}
@@ -36,7 +37,8 @@ export default function Page() {
             </div>
           </section>
         </div>
-      </div>
+      </section>
+      <HomeContent/>
     </main>
   );
 }
