@@ -1,0 +1,28 @@
+.presentation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem;
+    height: 100vh;
+}
+
+.elements{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    gap: 5rem;
+}
+
+.title3{
+    font-size: 2rem;
+}
+.imgf{
+    box-sizing: border-box;
+    border-top-left-radius: 80px;
+    filter: drop-shadow(-16px -10px 5px #ccc);
+}
+.parrafo {
+    font-size: 1.5rem;
+}
