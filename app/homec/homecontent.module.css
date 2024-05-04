@@ -1,0 +1,132 @@
+.presentation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem;
+    height: 100vh;
+}
+
+.elements{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    gap: 5rem;
+}
+
+.title3{
+    font-size: 2rem;
+}
+.imgf{
+    box-sizing: border-box;
+    border-top-left-radius: 80px;
+    filter: drop-shadow(-16px -10px 5px #ccc);
+}
+.parrafo {
+    font-size: 1.5rem;
+}
+
+
+.menu{
+    padding: 20px;
+    position: absolute;
+    border-radius: 8px;
+  }
+  
+  .menu:hover{
+    cursor: pointer;
+  }
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(#59a3b4, #458998, #317589, #2b6c7e);
+    gap: 5rem;
+    padding: 50px 0;
+  }
+  .titles {
+    font-size: 5rem;
+    color: white;
+    margin-right: 1rem;
+  }
+  .logo {
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.2));
+  }
+  .letter {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .animation {
+    height: 6rem;
+    overflow: hidden;
+    font-size: 5rem;
+    color: white;
+    /* border: 1px solid black; */
+  }
+  
+  .animation div:nth-child(1) {
+    animation: transition-animation 9s infinite;
+    margin-bottom: 1.3rem;
+  }
+  .animation div:nth-child(2) {
+    animation: transition-animation 9s infinite;
+    margin-bottom: 1.3rem;
+  }
+  .animation div:nth-child(3) {
+    animation: transition-animation 9s infinite;
+    margin-bottom: 1.3rem;
+  }
+  
+  .first div {
+    padding: 0 10px;
+    background-color: #3c8b0e;
+  }
+  .second div {
+    padding: 0 10px;
+    background-color: #cd921e;
+  }
+  .third div {
+    padding: 0 10px;
+    background-color: #20a7d8;
+  }
+  
+  @keyframes transition-animation {
+    0% {
+      transform: translateY(-0.5rem);
+    }
+    10% {
+      transform: translateY(-0.5rem);
+    }
+  
+    20% {
+      transform: translateY(-5rem);
+    }
+    30% {
+      transform: translateY(-5rem);
+    }
+  
+    40% {
+      transform: translateY(-9.5rem);
+    }
+    60% {
+      transform: translateY(-9.5rem);
+    }
+  
+    70% {
+      transform: translateY(-5rem);
+    }
+    80% {
+      transform: translateY(-5rem);
+    }
+  
+    90% {
+      transform: translateY(-0.5rem);
+    }
+    100% {
+      transform: translateY(-0.5rem);
+    }
+  }
+  
