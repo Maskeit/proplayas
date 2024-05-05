@@ -2,17 +2,10 @@ import Image from 'next/image';
 import persons from '@/public/tortuga-marina.jpeg'
 import styles from './homecontent.module.css'
 import logo from '@/public/proplayas_logo.svg'
-import { Menu } from '@/app/components/buttons';
+
 import { lusitana, opens, quicksand, montserrat } from '@/app/ui/fonts';
 
 
-export const HomeMenu = () =>{
-  return(
-    <div className={styles.menu}>
-      <Menu/>
-    </div>
-  )
-}
 
 export const HomeBanner = () => {
   return(

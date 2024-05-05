@@ -28,15 +28,7 @@
 }
 
 
-.menu{
-    padding: 20px;
-    position: absolute;
-    border-radius: 8px;
-  }
-  
-  .menu:hover{
-    cursor: pointer;
-  }
+
   .banner {
     display: flex;
     justify-content: center;
