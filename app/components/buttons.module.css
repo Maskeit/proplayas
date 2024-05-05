@@ -1,0 +1,36 @@
+.sm-btn{
+    width: 80px;
+    height: 40px;
+    border-radius: 60px;
+    background: #317589;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+}
+
+.sm-btn:hover{
+    background: #285f6f;
+    transition: ease-in-out;
+    box-shadow: none;
+}
+
+.menu {
+    padding: 2px;
+    position: fixed;
+    border-radius: 8px;
+    backdrop-filter: blur(9px);
+    background: #a4bcc7a2;
+    top: 30px;
+    left: 30px;
+  }
+  
+  .menu:hover {
+    cursor: pointer;
+  }
+
+  .closeMenu{
+    transition: 0.4s ease;
+  }
+  .closeMenu:hover{
+    transform: scale(1.2);
+  }

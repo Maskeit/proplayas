@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import '@/app/components/buttons.component.css'
-import {Bars3Icon, QuestionMarkCircleIcon, ArrowLeftCircleIcon } from '@heroicons/react/24/outline';
+import styles from '@/app/components/buttons.module.css'
+import {Bars3Icon, QuestionMarkCircleIcon, ArrowLeftCircleIcon, ChevronLeftIcon } from '@heroicons/react/24/outline';
 
 import Link from 'next/link';
 
@@ -34,8 +34,20 @@ export const Help = () =>{
   )
 }
 
-export const Menu = () =>{
+export const Menu = ({toggleSidebar, isActive}) =>{
+  if (isActive) return null; // No mostrar el botón si el sidebar está activo
+
   return(
-    <Bars3Icon fill='#000' color='#fff' width='60px'/>
+    <div className={styles.menu}>
+      <Bars3Icon onClick={toggleSidebar} fill='#000' color='#fff' width='60px'/>
+    </div>
+  )
+}
+
+export const CloseMenu = ({toggleSidebar}) =>{
+  return(
+    <button onClick={toggleSidebar} className={styles.closeMenu}>
+      <ChevronLeftIcon width='35px' color='#000'/>
+    </button>
   )
 }
