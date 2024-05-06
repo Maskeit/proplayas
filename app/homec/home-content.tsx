@@ -5,22 +5,27 @@ import eventos from '@/public/home/eventos.png'
 import proyectos from '@/public/home/proyectos.png'
 import publicaciones from '@/public/home/publicaciones.png'
 import styles from './homecontent.module.css'
-import logo from '@/public/proplayas_logo.svg'  
-
+import logo from '@/public/proplayas_logo.svg'
+import background from '@/public/portada-playa.jpg'
 import { lusitana, opens, quicksand, montserrat } from '@/app/ui/fonts';
-
+import { Titlesh1 } from '../components/titles';
 
 
 export const HomeBanner = () => {
   return(
     <section className={styles.banner}>
-    <Image
-      src={logo}
-      width={360}
-      height={360}
-      className={`hidden md:block ${styles.logo}`}
-      alt="Screenshots"
-    />
+      <Image 
+        src={background} 
+        className={`${styles.background}`}
+        alt='Fondo de playa'
+      />
+      <Image
+        src={logo}
+        width={360}
+        height={360}
+        className={` ${styles.logo}`}
+        alt="Screenshots"
+      />
 
     <div className={`${styles.letter}`} >
       <p className={styles.titles}>Hola, somos</p>
