@@ -17,6 +17,7 @@
 .menu {
     padding: 2px;
     position: fixed;
+    z-index: 100;
     border-radius: 8px;
     backdrop-filter: blur(9px);
     background: #a4bcc7a2;
