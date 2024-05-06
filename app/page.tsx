@@ -1,10 +1,10 @@
 'use client'
 import styles from '@/app/homec/home.module.css';
-import { HomeContent, HomeBanner } from '@/app/homec/home-content';
 import SideNav from './components/sidenav';
 import { Menu } from '@/app/components/buttons';
 import { useState } from 'react';
-
+import { FullPageScroll } from './components/FullPageScroll';
+import { HomeBanner, ProplayasInfo, Activities, ScientistNodes } from '@/app/homec/home-content';
 
 export default function Page() {
 
@@ -20,8 +20,12 @@ export default function Page() {
         <Menu toggleSidebar={toggleSidebar} isActive={isActive}/>
       </div>
       <SideNav toggleSidebar={toggleSidebar} isActive={isActive}/>
-      <HomeBanner/>
-      <HomeContent/>
+      <FullPageScroll>
+              <HomeBanner />
+              <ProplayasInfo />
+              <Activities />
+              <ScientistNodes />
+    </FullPageScroll>
     </main>
   );
 }
