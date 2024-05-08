@@ -9,6 +9,23 @@ export type User = {
   password: string;
 };
 
+export type Posts = {
+  id:string;
+  name: string;
+  date:string;
+  image_url:string;
+  status: 'active' | 'deleted'
+  text:string;
+  title:string;
+}
+
+export type Json ={
+  userId:string;
+  id:string;
+  title:string;
+  body:string;
+}
+
 export type Customer = {
   id: string;
   name: string;
