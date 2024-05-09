@@ -26,6 +26,15 @@ export type Json ={
   body:string;
 }
 
+//imagenes
+export type Photos = {
+  albumId:string;
+  id:string;
+  title:string;
+  url:string;
+  thumbnailUrl:string;
+}
+
 export type Customer = {
   id: string;
   name: string;
