@@ -1,4 +1,4 @@
-.sm-btn{
+.sm_btn{
     width: 80px;
     height: 40px;
     border-radius: 60px;
@@ -8,7 +8,7 @@
     border: none;
 }
 
-.sm-btn:hover{
+.sm_btn:hover{
     background: #285f6f;
     transition: ease-in-out;
     box-shadow: none;

@@ -1,6 +1,6 @@
 import '@/app/ui/global.css'
 import {inter, opens} from '@/app/ui/fonts';
-import { Footer } from './ui/footer';
+import { Footer } from './components/footer';
 export default function RootLayout({
   children,
 }: {

@@ -1,11 +1,13 @@
 "use client"
 import React, { Component } from "react";
 import Link from 'next/link';
+import styles from './footer.module.css';
+
 
 export class Footer extends Component{
 render(): React.ReactNode {
   return (
-    <section className="bg-white">
+    <footer className={styles.footer}>
       <div className="mx-auto max-w-screen-xl space-y-8 overflow-hidden px-4 py-12 sm:px-6 lg:px-8">
         <nav className="-mx-5 -my-2 flex flex-wrap justify-center">
           <div className="px-5 py-2">
@@ -104,7 +106,7 @@ render(): React.ReactNode {
           © 2024 Proplayas. All rights reserved.
         </p>
       </div>
-    </section>
+    </footer>
   );
 }
 }

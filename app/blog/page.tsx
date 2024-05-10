@@ -5,6 +5,10 @@ import { Menu } from '../components/buttons';
 import SideNav from '../components/sidenav';
 import { Json } from '../lib/definitions';
 import { Small_Button } from '../components/buttons';
+import Image from 'next/image';
+import hero from '@/public/hero-desktop.png';
+import portada from  '@/public/blog/portada-playa.webp';
+
 export default function Page() {
   const [isActive, setIsActive] = useState(false);
   const toggleSidebar = () => {
@@ -33,25 +37,38 @@ export default function Page() {
 
   return (
     <div className={styles.blog}>
-      <div className={styles.menu}>
-        <Menu toggleSidebar={toggleSidebar} isActive={isActive} />
-      </div>
+      <Menu toggleSidebar={toggleSidebar} isActive={isActive} />
       <SideNav toggleSidebar={toggleSidebar} isActive={isActive} />
       <section className={styles.banner}>
-        <h2 className={styles.titlesBanner}>Únete a la red de Proplayas</h2>
+        <Image src={portada} alt='backgorund playa' className={styles.imgBanner}/>
+        <div className={styles.bannerContent}>
+          <h2 className={styles.titlesBanner}>Únete a la red de Proplayas</h2>
+          <Small_Button text='unirse'/>
+        </div>
       </section>
 
       <section className={styles.content}>
         <article className={styles.lastPost}>
           {selectedPost ? (
-            <div>
-              <h3>
-                <strong>{selectedPost.title}</strong>
-              </h3>
+            
+            
+            <div className={styles.lastPostContainer}>
+              <h2 className={styles.lastPostTitle}>{selectedPost.title}</h2>
+              <Image src={portada} className={styles.thumbnail}  alt="blog img" />
+              <p>{selectedPost.body}</p>
+              <p>{selectedPost.body}</p>
+              <p>{selectedPost.body}</p>
+              <p>{selectedPost.body}</p>
               <p>{selectedPost.body}</p>
             </div>
+
+
           ) : (
-            <p>Joder</p>
+            <div className={styles.lastPostContainer}>
+              <h2 className={styles.lastPostTitle}>Titulo de publicacion</h2>
+              <Image src={portada} className={styles.thumbnail} alt="blog img" />
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus iure possimus rem ducimus, saepe mollitia impedit dolores rerum eum ad debitis porro nesciunt. Officia enim iusto consequuntur quia, debitis rem?</p>
+            </div>
           )}
         </article>
         <article className={styles.recentNews}>
@@ -64,7 +81,7 @@ export default function Page() {
             >
               <h4>{post.title}</h4>
               <p>
-                ID: {post.id}, User ID: {post.userId}
+                Nodo: {post.id}, usuario: {post.userId}
               </p>
             </div>
           ))}

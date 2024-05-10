@@ -15,7 +15,7 @@ export type Props = {
 
 export const Small_Button = ({text} :Buttons ) => {
   return (
-    <button className='sm-btn'>{text}</button>
+    <button className={styles.sm_btn}>{text}</button>
   )
 }
 
@@ -39,7 +39,7 @@ export const Menu = ({toggleSidebar, isActive}) =>{
 
   return(
     <div className={styles.menu}>
-      <Bars3Icon onClick={toggleSidebar} fill='#000' color='#fff' width='60px'/>
+      <Bars3Icon onClickCapture={toggleSidebar} fill='#000' color='#fff' width='60px'/>
     </div>
   )
 }
