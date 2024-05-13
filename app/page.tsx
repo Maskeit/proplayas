@@ -4,7 +4,7 @@ import SideNav from './components/sidenav';
 import { Menu } from '@/app/components/buttons';
 import { useState } from 'react';
 import { FullPageScroll } from './components/FullPageScroll';
-import { HomeBanner, ProplayasInfo, Activities, ScientistNodes } from '@/app/homec/home-content';
+import { HomeBanner, ProplayasInfo, Activities, ScientistNodes, SocialNodes, BusinessNodes, Regulation, JoinUs} from '@/app/homec/home-content';
 import { Footer } from './ui/footer';
 
 export default function Page() {
@@ -21,12 +21,14 @@ export default function Page() {
         <Menu toggleSidebar={toggleSidebar} isActive={isActive}/>
       </div>
       <SideNav toggleSidebar={toggleSidebar} isActive={isActive}/>
-      <FullPageScroll>
-              <HomeBanner />
-              <ProplayasInfo />
-              <Activities />
-              <ScientistNodes />
-    </FullPageScroll>
+      <HomeBanner />
+      <ProplayasInfo />
+      <Activities />
+      <ScientistNodes />
+      <SocialNodes />
+      <BusinessNodes />
+      <Regulation />
+      <JoinUs />
     </main>
   );
 }
