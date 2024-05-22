@@ -10,6 +10,12 @@
   justify-content: center;
   align-items: center;
 }
+.imgBanner{
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 20vh;
+}
 .bannerContent{
   display: flex;
   position: absolute;
@@ -18,63 +24,13 @@
   align-items: center;
   color: #fff;
 }
-.imgBanner{
-  position: relative;
-  object-fit: cover;
-  width: 100%;
-  height: 20vh;
-}
 .titlesBanner {
   font-size: 2rem;
 }
-.joinBtn{
-  border-radius: 20px;
-  box-shadow: 2px 2px 4px #ccc;
-  width:100px;
-  height: 30px;
-}
 .content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
   gap: 2rem;
   padding: 1rem 0.6rem;
-}
-
-@media (width <= 768px) {
-  .titlesBanner {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  .content {
-    display: flex;
-    flex-direction: column;
-  }
-  .lastPost {
-    height: auto;
-  }
-  .postItem {
-    height: 29vh;
-  }
-}
-.lastPost {
-  background: #fff;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  padding: 12px;
-  box-shadow: 4px 3px 4px #ccc;
-}
-.lastPostContainer {
-  object-fit: cover;
-  height: auto;
-}
-.lastPostTitle {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-.thumbnail {
-  min-width: 80%;
-  height: auto;
 }
 .recentNews {
   /* border: 1px solid blue; */
@@ -92,7 +48,6 @@
   /* border: 1px solid black; */
   width: 100%;
 }
-
 .postItem {
   padding: 10px;
   margin-bottom: 10px;
@@ -100,10 +55,33 @@
   box-shadow: 2px 1px 4px #ccc;
   transition: 0.1s ease;
 }
-
 .postItem:hover {
   cursor: pointer;
 }
 .postItem:active {
   background: #e4e4e4;
+}
+.verMasPosts{
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  background: var(--main-bg-color);
+  right: 30px;
+}
+.verMasPosts:hover{
+  cursor: pointer;
+}
+
+@media (width <= 768px) {
+  .titlesBanner {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .postItem {
+    height: 29vh;
+  }
 }

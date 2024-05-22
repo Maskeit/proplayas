@@ -17,10 +17,7 @@ export default function Page() {
 
   return (
     <main className={`flex min-h-screen flex-col p-0 ${styles.mainPage}`}>
-      <div className={styles.menu}>
-        <Menu toggleSidebar={toggleSidebar} isActive={isActive}/>
-      </div>
-      <SideNav toggleSidebar={toggleSidebar} isActive={isActive}/>
+
 
               <HomeBanner />
               <ProplayasInfo />

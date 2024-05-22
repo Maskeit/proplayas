@@ -1,6 +1,6 @@
 import '@/app/ui/global.css'
 import {inter, opens} from '@/app/ui/fonts';
-import { Footer } from './components/footer';
+import Layout from './components/layout';
 export default function RootLayout({
   children,
 }: {
@@ -9,8 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${opens.className} antialiased`}>
-        {children}
-        <Footer/>
+        <Layout children={children}/>
       </body>
     </html>
   );
