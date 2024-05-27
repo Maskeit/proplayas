@@ -5,7 +5,7 @@ import { Menu } from '@/app/components/buttons';
 import { useState } from 'react';
 import { FullPageScroll } from './components/FullPageScroll';
 import { HomeBanner, ProplayasInfo, Activities, ScientistNodes, SocialNodes, BusinessNodes, Regulation, JoinUs} from '@/app/homec/home-content';
-import { Footer } from './ui/footer';
+import { Footer } from './components/footer';
 
 export default function Page() {
 
