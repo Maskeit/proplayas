@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './banner.module.css';
 import Image from 'next/image';
-import playa from '@/public/playa1.jpeg'
+import playa from '@/public/register/playa1.jpeg'
 import logoPropPlayas from '@/public/proplayas_logo.svg';
 
 export const Banner = () => {

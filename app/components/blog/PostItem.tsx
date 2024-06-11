@@ -1,8 +1,10 @@
+//PostItem.tsx
 import styles from '@/app/components/blog/blog.module.css';
 import Image from 'next/image';
-import avatar from '@/public/tortuga-marina.jpeg';
+import avatar from '@/public/register/tortuga-marina.jpeg';
+import Link from 'next/link'; // Importa Link para manejar la navegación de Next.js
 
-export const PostItem = ({ title, body }) => {
+export const PostItem = ({ title, body }) => { // Asegúrate de recibir el `id` del post
   return (
     <div className={styles.postItem}>
       <Image
@@ -15,14 +17,9 @@ export const PostItem = ({ title, body }) => {
         <h2 className={styles.postTitle}>{title}</h2>
         <div className={styles.postDesc}>
           <span className={styles.postAutor}>Autor: Miguel Alejandre</span>
-          <span className={styles.postDate}>14 Ago 2024</span>
+          <time className={styles.postDate}>14 Ago 2024</time>
         </div>
         <p>{body}</p>
-
-        <div className='mt-2 flex'>
-          <a href="#" className={styles.postContinue}>Seguir leyendo</a>
-        </div>
-
       </div>
     </div>
   );
