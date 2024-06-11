@@ -15,7 +15,7 @@ export type Props = {
 
 export const Small_Button = ({text} :Buttons ) => {
   return (
-    <button className='sm-btn'>{text}</button>
+    <button className={styles.smBtn}>{text}</button>
   )
 }
 

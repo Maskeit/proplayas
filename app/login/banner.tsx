@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './banner.module.css';
 import Image from 'next/image';
-import tortuga from '@/public/tortuga-marina.jpeg';
+import tortuga from '@/public/register/tortuga-marina.jpeg';
 import logoPropPlayas from '@/public/proplayas_logo.svg';
 
 export const Banner = () => {

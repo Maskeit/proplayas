@@ -7,7 +7,7 @@ import publicaciones from '@/public/home/publicaciones.png'
 import placeholder from '@/public/home/placeholder.webp'
 import styles from './homecontent.module.css'
 import logo from '@/public/proplayas_logo.svg'
-import background from '@/public/portada-playa.jpg'
+import background from '@/public/home/portada-playa.jpg'
 import { lusitana, opens, quicksand, montserrat } from '@/app/ui/fonts';
 import { Titlesh1 } from '../components/titles';
 import { Card } from '../components/cards';
