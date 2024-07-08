@@ -296,27 +296,58 @@ export const Regulation = () => {
   );
 };
 
+// sm: min-width 640px
+// md: min-width 768px
+// lg: min-width 1024px
+// xl: min-width 1280x
+// 2xl: min-width 1536x
+
 export const JoinUs = () => {
   return (
-    <section className={`p-10 flex h-full min-h-screen`}>
-        <article className={`p-10 flex justify-center items-center h-auto`}>
-          <div className={`group flex flex-col justify-center items-start gap-2 w-3/5 h-3/5 duration-500 relative rounded-2xl p-20 bg-verde-200 hover:-translate-y-2 shadow-lg hover:shadow-2xl shadow-gray-400`}>
-            <div className={`absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-2/5 h-2/5 rounded-3xl`}>
-              <Image className={`rounded-3xl`} src={placeholder} alt='grupo de personas'/>
+    // Para toda la sección dentro de la página
+    <section className={`p-10 flex h-full min-h-screen sm:p-4 md:p-6`}>
+      {/* Para el contenido */}
+        <article className={`p-2 flex justify-center items-center h-auto sm:p-1`}>
+          {/* Recuadro verde contenedor de todo*/}
+          <div className={`group flex flex-col justify-center items-start gap-2 w-3/5 h-3/5 duration-500 relative rounded-2xl p-10 bg-verde-200 hover:-translate-y-2 shadow-lg hover:shadow-2xl shadow-gray-400
+                            sm:p-4 sm:w-full sm:h-auto
+                            md:p-10 md:w-5/6 md:h-3/4
+                            lg:p-20 lg:w-3/4 lg:h-2/3
+                            xl:p-20 2xl:p-30
+                          `}>
+            
+            {/* Recuadro > Imágen */}
+            <div className={`absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-16 -right-10 w-2/5 h-2/5 rounded-3xl overflow-hidden
+                            sm:w-1/2 sm:h-1/2 
+                            md:w-3/5 md:h-2/5 
+                            lg:w-3/5 lg:h-2/5 
+                            xl:w-1/2 xl:h-1/2 xl:-bottom-24
+                            `}>
+              <Image className={`rounded-3xl object-cover w-full h-full`} src={placeholder} alt='placeholder'/>
             </div>
 
+            {/* Contenido Textual */} 
             <div className={`mb-6`}>
-              <h2 className={`text-2xl font-semibold mb-5 text-gray-950`}>¡Únete a nosotros!</h2>
-              <p className={`text-gray-800 line-clamp-3 text-lg`}>
+              <h2 className={`text-2xl font-semibold mb-5 text-gray-950
+                              lg:text-xl xl:text-2xl
+                              2xl:text-4xl 2xl:mb-10`}>¡Únete a nosotros!</h2>
+              <p className={`text-gray-800 text-lg font-medium
+                              lg:text-base 2xl:text-xl`}>
                     La vinculación a la Red PROPLAYAS no tiene costo y parte de un principio colaborativo y de buena voluntad. 
                     Para pertenecer a esta se debe conformar un Nodo Local, con al menos un miembro, que será la unidad central de intercambio. 
                     Cada Nodo debe diligenciar y mantener actualizada su ficha de registro.
               </p>
             </div>
-            <button className={`hover:bg-azul-600 bg-azul-500 text-white mt-6 rounded-xl p-2 px-6`}> 
+
+            {/* Botón */}
+            <button className={`hover:bg-azul-600 bg-azul-500 text-white mt-2 rounded-xl px-6 py-3 
+                                lg:text-base
+                                2xl:text-xl 2xl:py-3 2xl:px-6 2xl:mt-2`}> 
               Contáctanos aquí 
             </button>
+
           </div>
+
         </article>
     </section>
   );
