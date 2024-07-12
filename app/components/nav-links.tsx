@@ -21,11 +21,8 @@ const linksDash = [
 
 const links = [
   { name: 'Inicio', href: '/', icon: HomeIcon },
-  {name: 'Blog', href: '/blog', icon: GlobeAmericasIcon},
-  {
-    name: 'Webinars',
-    href: '/',
-    icon: DocumentDuplicateIcon,
+  { name: 'Blog', href: '/blog', icon: GlobeAmericasIcon},
+  { name: 'Webinars', href: '/webinars', icon: DocumentDuplicateIcon,
   },
   { name: 'Web series', href: '/', icon: UserGroupIcon },
   {name: 'Libros', href: '/', icon: GlobeAmericasIcon},
