@@ -17,7 +17,7 @@ export const Modal: React.FC<ModalProps> = ({ showModal, onClose }) => {
             <div className="fixed inset-0 bg-black opacity-50" onClick={onClose}></div>
 
             <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 p-6">
-                <button className="absolute top-2 right-2 text-gray-900" onClick={onClose}>
+                <button className="absolute top-4 right-6 text-gray-900 text-3xl" onClick={onClose}>
                 &times;
                 </button>
 
@@ -29,7 +29,7 @@ export const Modal: React.FC<ModalProps> = ({ showModal, onClose }) => {
                     <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                         Inscripción al Webinar
                     </h5>
-                    <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+                    <p className="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
                         Continua al siguiente formulario de Google para inscribirte con tus datos.
                     </p>
                 </div>
