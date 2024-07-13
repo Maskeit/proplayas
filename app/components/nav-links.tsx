@@ -2,7 +2,11 @@ import {
   UserGroupIcon,
   HomeIcon,
   DocumentDuplicateIcon,
-  GlobeAmericasIcon
+  GlobeAmericasIcon,
+  BookOpenIcon,
+  ComputerDesktopIcon,
+  PlayIcon,
+  DocumentTextIcon
 } from '@heroicons/react/24/outline';
 
 // Map of links to display in the side navigation.
@@ -21,11 +25,11 @@ const linksDash = [
 
 const links = [
   { name: 'Inicio', href: '/', icon: HomeIcon },
-  { name: 'Blog', href: '/blog', icon: GlobeAmericasIcon},
-  { name: 'Webinars', href: '/webinars', icon: DocumentDuplicateIcon,
-  },
-  { name: 'Web series', href: '/', icon: UserGroupIcon },
-  {name: 'Libros', href: '/', icon: GlobeAmericasIcon},
+  { name: 'Publicaciones', href: '/blog', icon: DocumentTextIcon},
+  { name: 'Nodos', href: '/', icon: UserGroupIcon,},
+  { name: 'Webinars', href: '/', icon: ComputerDesktopIcon,},
+  { name: 'Web series', href: '/', icon: PlayIcon },
+  { name: 'Libros', href: '/', icon: BookOpenIcon},
   
 ]
 
