@@ -3,8 +3,7 @@ import styles from '@/app/homec/home.module.css';
 import SideNav from '../components/sidenav';
 import { Menu } from '@/app/components/buttons';
 import { useState } from 'react';
-import { Banner , Webinars} from '@/app/components/webinars/webinars-content';
-import { HomeBanner, ProplayasInfo, Activities, ScientistNodes, SocialNodes, BusinessNodes, Regulation, JoinUs} from '@/app/homec/home-content';
+import { Banner , Webinars} from '@/app/components/series/series-content';
 import { Footer } from '../components/footer';
 
 export default function Page() {
