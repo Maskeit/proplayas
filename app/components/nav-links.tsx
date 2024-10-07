@@ -26,10 +26,10 @@ const linksDash = [
 const links = [
   { name: 'Inicio', href: '/', icon: HomeIcon },
   { name: 'Publicaciones', href: '/blog', icon: DocumentTextIcon},
-  { name: 'Nodos', href: '/', icon: UserGroupIcon,},
-  { name: 'Webinars', href: '/', icon: ComputerDesktopIcon,},
-  { name: 'Web series', href: '/', icon: PlayIcon },
-  { name: 'Libros', href: '/', icon: BookOpenIcon},
+  { name: 'Nodos', href: '/nodos', icon: UserGroupIcon,},
+  { name: 'Webinars', href: '/webinars', icon: ComputerDesktopIcon,},
+  { name: 'Web series', href: '/series', icon: PlayIcon },
+  { name: 'Libros', href: '/libros', icon: BookOpenIcon},
   
 ]
 
