@@ -16,7 +16,9 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
+/* * {
+  border: 1px solid red;
+} */
 :root {
   --naranja-50: #FCF8F0;
   --naranja-100: #F6E8CD;
