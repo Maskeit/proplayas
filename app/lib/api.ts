@@ -1,9 +1,30 @@
-// api.ts
+// lib/api.ts
+export async function apiRequest(endpoint: string, method = 'GET', body: any = null, customHeaders: any = {}) {
+  const headers = {
+    ...customHeaders,
+  };
 
-export const fetchPosts = async (limit = 10) => {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}`);
-  if (!response.ok) {
-    throw new Error('Network response was not ok');
+  const options: RequestInit = { method, headers };
+  if (body) {
+    options.body = JSON.stringify(body);
   }
-  return response.json();
-};
+
+  try {
+    const response = await fetch(endpoint, options);
+  
+    if (response.status === 401) {
+      // Manejar específicamente el error 401
+      const errorData = await response.json();
+      throw new Error('Invalid credentials.');
+    } else if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.detail || 'Ocurrió un error en la solicitud.');
+    }  
+    // Si la respuesta es correcta (200)
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+  
+}

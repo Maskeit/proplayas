@@ -5,8 +5,6 @@
     justify-content: center;
     height: 100vh;
     background-color: #fff;
-    /* border: 1px solid red; */
-    /* position: relative; */
   }
 
   .loginBox {
@@ -43,20 +41,19 @@
   
   .label {
     color: #09434c;
-    display: block; /* Asegúrate de que la etiqueta sea un bloque para que el input aparezca debajo */
-    margin-bottom: 5px; /* Ajustado para el espaciado correcto */
+    display: flex;
+    margin-bottom: 5px;
   }
   
   .inputField {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #ccc; /* Añadido para visualizar el borde */
+    border: 1px solid #ccc;
     border-radius: 8px;
     background: #F2F2F2;
     padding-left: 2.3rem;
   }
   
-  /* Selecciona el icono inmediatamente después del input enfocado*/
   
   .checkboxGroup {
     display: flex;
@@ -104,3 +101,17 @@
     text-decoration: underline;
   }
   
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+  }
+  
+  .errorMessage {
+    color: red;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: shake 0.3s ease-in-out;
+  }
