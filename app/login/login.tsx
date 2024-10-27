@@ -2,55 +2,53 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Este import es clave para que funcione en el directorio app
 import styles from './login.module.css';
-import { LockClosedIcon, AtSymbolIcon, ArrowRightOnRectangleIcon } from '@heroicons/react/24/outline';
+import { LockClosedIcon, AtSymbolIcon, ArrowRightOnRectangleIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { login } from '../lib/auth/auth';
+import Loader from '../components/loader';
 
 export const LoginForm = () => {
+    const router = useRouter();
     const [userData, setUserData] = useState({
         email: '',
         password: ''
     });
-
-    const router = useRouter();
+    
+    const [error, setError]  = useState("");
+    const [alert, setAlert] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
-        setUserData({ ...userData, [name]: value });
+        setUserData({...userData, [name]: value });
     };
-
+    
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-    
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';  // fallback al entorno local
-    
-        try {
-            const response = await fetch("http://localhost:8000/auth", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                },
-                body: JSON.stringify(userData)
-            });
-    
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-    
-            const data = await response.json(); // Obtener el token de la respuesta
-            console.log('Token:', data.token);
-    
-            // Guardar el token en localStorage o sessionStorage
-            localStorage.setItem('token', data.token);
-    
-            // Redirigir al usuario a la página /home
-            router.push('/home');
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Error al iniciar sesión, revisa tus credenciales.');
-        }
-    };    
 
+        setLoading(true);
+        try {
+            const response = await login(userData.email, userData.password);
+            setLoading(false);
+            triggerError("");
+            router.push('/');
+        } catch (error: any) {            
+            triggerError(error.message);
+            setLoading(false);
+        }
+    };
+    const triggerError = (message: any) => {
+        setError("");
+        setTimeout(() => {
+        setError(message);
+        }, 100);
+    };
+    
+    const [showPassword, setShowPassword] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
     return (
         <div className={`${styles.loginContainer}`}>
             <div className={styles.loginBox}>
@@ -72,9 +70,14 @@ export const LoginForm = () => {
                         </div>
                     </div>
                     <div className={styles.inputGroup}>
-                        <label className={styles.label} htmlFor="password">Contraseña</label>
+                        <label className={styles.label} htmlFor="password">
+                            Contraseña
+                            <span onClick={togglePasswordVisibility} style={{ cursor: 'pointer', marginLeft: '10px' }}>
+                                {showPassword ? <EyeSlashIcon width='24px' /> : <EyeIcon width='24px' />}
+                            </span>
+                        </label>
                         <input
-                            type="password"
+                            type={showPassword ? 'text' : 'password'}
                             name='password'
                             id='password'
                             className={styles.inputField}
@@ -89,13 +92,14 @@ export const LoginForm = () => {
                         <input type="checkbox" id="rememberMe" className={styles.checkbox} />
                         <label htmlFor="rememberMe" className={styles.checkboxLabel}>Recordarme</label>
                     </div>
-                    <button type="submit" className={styles.loginButton}>
-                        Iniciar sesión
-                        <ArrowRightOnRectangleIcon color='#pink' width='24px' />
-                    </button>
-                    <Link href='/login/forgot' className={styles.forgotPassword}>
-                        Olvidé mi contraseña
-                    </Link>
+                    {error && <span className={styles.errorMessage}>{error}</span>}
+                    {loading ? (<Loader />) :(
+                        <button type="submit" className={styles.loginButton}>
+                            Iniciar sesión
+                            <ArrowRightOnRectangleIcon width='24px' />
+                        </button>
+                    )}
+                    <Link href='/login/forgot' className={styles.forgotPassword}>Olvidé mi contraseña</Link>
                 </form>
             </div>
         </div>
