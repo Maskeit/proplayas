@@ -44,7 +44,7 @@ export const RegisterForm = () => {
         try {
             const response = await register(userData);
             setLoading(false);
-            router.push('/login');
+            //router.push('/login');
         } catch (error) {
             triggerError('No se pudo completar el registro, intente más tarde.');
             setLoading(false);

@@ -14,5 +14,4 @@ export async function register(userData: any) {
     'Content-Type': 'application/ld+json',
     Accept: 'application/ld+json',
   });
-
 }

@@ -3,7 +3,7 @@ import { Pool } from 'pg';
 
 const pool = new Pool({
   user: 'tu_usuario',         // Usuario de PostgreSQL
-  host: 'localhost',           // Dirección del servidor
+  host: 'proplayas.org',           // Dirección del servidor
   database: 'proplayas',       // Nombre de tu base de datos
   password: '',   // Contraseña
   port: 5432,    // Puerto
